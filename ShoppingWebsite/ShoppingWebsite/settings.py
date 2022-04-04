@@ -56,6 +56,11 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(BASE_DIR, 'home/templates'),
+            os.path.join(BASE_DIR, 'login/templates'),
+            os.path.join(BASE_DIR, 'signup/templates'),
+            os.path.join(BASE_DIR, 'cart/templates'),
+            os.path.join(BASE_DIR, 'product/templates'),
+            os.path.join(BASE_DIR, 'settings/templates')
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -118,6 +123,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
